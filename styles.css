@@ -305,14 +305,11 @@ footer{
     background-color: #242424
 }
 
-.footer_logo{
-    margin-bottom: 20px;
-}
-
 .footer_social--list{
     width: 100%;
+    max-width: 500px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     margin-bottom: 28px;
 }
 
@@ -322,6 +319,7 @@ footer{
     align-items: center;
     justify-content: center;
     padding: 8% 0;
+    text-decoration: none;
 }
 
 .footer_logo--img{
@@ -330,8 +328,26 @@ footer{
 }
 
 .footer_social--link,
-.footer_copyright{
-    color: white;
-    text-decoration: none;
-    margin: 12px 0;
+.footer_copyright,
+.footer_logo--popper{
+    color: #fff;
+}
+
+.footer_logo--popper{
+    position: absolute;
+    right: 0;
+    top: 30px;
+    font-weight: 700;
+    opacity: 0;
+    transition: all 300ms ease;
+}
+
+.footer_anchor{
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.footer_anchor:hover .footer_logo--popper{
+    transform: translate(60px);
+    opacity: 1;
 }
