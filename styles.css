@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 h1, h2, h3, h4, h5, h6, span {
     color: #242424;
     text-align: center;
@@ -23,6 +27,30 @@ p {
 
 a{
     text-decoration: none;
+    position: relative;
+}
+
+.link_hover-effect:after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    bottom: -3px;
+    right: 0;
+    transition: all 300ms ease;
+}
+
+.link_hover-effect--white:after{
+    background-color: #fff;
+}
+
+.link_hover-effect--black:after{
+    background-color: #000;
+}
+
+.link_hover-effect:hover:after{
+    width: 100%;
+    left: 0;
 }
 
 li{
@@ -69,6 +97,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 12px;
 } 
 
 .nav_link--list{
@@ -192,6 +221,7 @@ nav{
 
 .language_list{
     display: flex;
+    justify-content: center;
     width: 100%;
     flex-wrap: wrap;
 }
@@ -270,12 +300,12 @@ nav{
 .project_description{
     position: absolute;
     top: 50%;
-    left: 90px
+    left: 90px;
     transform: translateY(100%);
     max-width: 550px;
     z-index: 3;
     opacity: 0;
-    transition: transform 450ms, opacity 300ms ease;
+    transition: transform 450ms, opacity 300ms;
 }
 
 .project_description--title{
@@ -292,17 +322,17 @@ nav{
 }
 
 .project_description--title,
-.project_description--subtitle,
+.project_description--sub-title,
 .project_description--para,
 .project_description--link{
     text-align: left;
-    color: white;
+    color: #fff;
 }
 
 /* FOOTER SECTION */
 
 footer{
-    background-color: #242424
+    background-color: #242424;
 }
 
 .footer_social--list{
@@ -348,6 +378,25 @@ footer{
 }
 
 .footer_anchor:hover .footer_logo--popper{
-    transform: translate(60px);
+    transform: translateX(60px);
     opacity: 1;
+}
+
+/* Small phones, tablets, large smartphones */
+@media (max-width: 768px) {
+    nav{
+        height: 68px;
+    }
+
+    h1{
+        font-size: 28px;
+    }
+
+    .about-me_info--para{
+        font-size: 18px;
+    }
+
+    .language{
+        width: calc(100% / 3);
+    }
 }
