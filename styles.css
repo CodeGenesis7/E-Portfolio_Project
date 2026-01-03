@@ -71,7 +71,7 @@ li{
 }
 
 .container{
-    padding: 50px 20px;
+    padding: 15px 20px;
 }
 
 .row{
@@ -90,7 +90,7 @@ section:nth-child(even){
 }
 
 .section_title{
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
 /* NAVIGATION BAR */
@@ -267,10 +267,15 @@ nav{
 }
 
 .language{
-    width: calc(100% / 3);
+    width: calc(100% / 4);
     display: flex;
     justify-content: center;
     position: relative;
+}
+
+#languages{
+    background-color: whitesmoke;
+    padding: 60px 0;
 }
 
 .language_img--wrapper{
