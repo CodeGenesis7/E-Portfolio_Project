@@ -73,6 +73,7 @@ li{
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
+    padding: 0 12px;
 }
 
 .text--purple{
@@ -206,7 +207,7 @@ nav{
 }
 
 .language{
-    width: 25%;
+    width: calc(100% / 3);
     display: flex;
     justify-content: center;
     position: relative;
@@ -318,11 +319,11 @@ nav{
 
 .project_description--link{
     font-size: 20px;
-    margin-right: 16px;
+    margin-right: 14px;
 }
 
 .project_description--title,
-.project_description--sub-title,
+.project_description--subtitle,
 .project_description--para,
 .project_description--link{
     text-align: left;
@@ -382,8 +383,10 @@ footer{
     opacity: 1;
 }
 
-/* Small phones, tablets, large smartphones */
+/* SMALL PHONES, TABLETS, LARGE SMARTPHONES */
+
 @media (max-width: 768px) {
+
     nav{
         height: 68px;
     }
@@ -395,8 +398,48 @@ footer{
     .about-me_info--para{
         font-size: 18px;
     }
-
+    
     .language{
         width: calc(100% / 3);
+    }
+
+    .project_description--para{
+        font-size: 14px;
+    }
+
+    .project_description{
+        left: 30px;
+        padding-right: 30px;
+    }
+}
+
+/* SMALL PHONES */
+
+@media (max-width: 480px){
+    .nav_link:not(:last-child){
+        display: none;
+    }
+
+    .project_description{
+        padding: 0;
+    }
+
+    .project_description--para{
+        display: none;
+    }
+
+    .project_description--link{
+        display: flex;
+        justify-content: center;
+    }
+
+    .project_description--title{
+        font-size: 32px;
+        line-height: 1;
+    }
+
+    .project_description--subtitle{
+        text-align: center;
+        margin: 12px 0;
     }
 }
